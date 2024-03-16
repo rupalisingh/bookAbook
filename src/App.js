@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Container, AppBar, Toolbar, Typography } from '@mui/material';
+import LoginPage from './Components/LoginPage';
+import HomePage from './Components/HomePage';
+import RegisterPage from './Components/RegisterPage';
+import UserProfileSetup from './Components/UserProfileSetup';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6">bookAbook</Typography>
+          </Toolbar>
+        </AppBar>
+        <Container maxWidth="lg" style={{ marginTop: '20px' }}>
+          <Routes> {/* Wrap Routes around Route components */}
+            <Route exact path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path = "/user-profile-setup" element = {<UserProfileSetup/>} />
+          </Routes>
+        </Container>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
