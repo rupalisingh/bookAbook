@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Typography, Grid, TextField, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-const RegisterPage = () => {
+const Register = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -10,13 +10,11 @@ const RegisterPage = () => {
     password: '',
   });
 
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add logic for registration
     console.log('Registration Form Data:', formData);
-    // After successful registration, navigate to profile setup page
     navigate('/user-profile-setup');
   };
 
@@ -95,4 +93,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default Register;

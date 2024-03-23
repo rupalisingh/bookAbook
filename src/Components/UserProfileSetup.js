@@ -11,8 +11,7 @@ import {
   Box,
   Divider,
 } from '@mui/material';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
-
+import { useNavigate } from 'react-router-dom'; 
 
 
 
@@ -117,7 +116,6 @@ const UserProfileSetup = () => {
                 <MenuItem value="fiction">Fiction</MenuItem>
                 <MenuItem value="thriller">Thriller</MenuItem>
                 <MenuItem value="romance">Romance</MenuItem>
-                {/* Add more options as needed */}
               </Select>
             </FormControl>
           </Grid>

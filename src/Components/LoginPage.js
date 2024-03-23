@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import { Typography, Grid, TextField, Button } from '@mui/material';
-import { useNavigate } from 'react-router-dom'; // Import useHistory
-
+import { useNavigate } from 'react-router-dom';
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const history = useNavigate(); // Initialize useHistory
-
+  const history = useNavigate(); 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Login Form Data:', { email, password });
-    // Add logic for login authentication
-    // If login is successful, navigate to home page
     history('/');
   };
 
